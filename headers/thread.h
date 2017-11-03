@@ -9,7 +9,7 @@ extern bool finish;
 struct threadParam {
 	int threadId;
 	Snapshot* snapshot;
-	int* updateNum;
+	unsigned long long* updateNum;
 };
 
 void* threadFunc(void* arg);

@@ -19,8 +19,8 @@ int main(int argc, char* argv[]) {
 
 	srand((unsigned)time(NULL));
 
-	int* updateNum = new int[threadNum];
-	int totUpdateNum = 0;
+	unsigned long long * updateNum = new unsigned long long[threadNum];
+	unsigned long long totUpdateNum = 0;
 
 	Snapshot* snapshot = new Snapshot(threadNum, 0);
 

@@ -4,7 +4,7 @@ void* threadFunc(void* arg) {
 	threadParam * tp = (threadParam*) arg;
 	int threadId = tp->threadId;
 	Snapshot* snapshot = tp->snapshot;
-	int* updateNum = tp->updateNum;
+	unsigned long long* updateNum = tp->updateNum;
 	//int updateNum = 0;
 	int randomValue;
 
