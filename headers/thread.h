@@ -7,7 +7,7 @@ struct threadParam {
 	int threadId;
 	Snapshot* snapshot;
 	int* updateNum;
-}
+};
 
 void* threadFunc(void* arg);
 

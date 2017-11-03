@@ -11,6 +11,6 @@ class Snapshot {
 	snap* collect();
 	void update(int value, int threadId);
 	int* scan();
-}
+};
 
 #endif
