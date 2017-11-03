@@ -9,6 +9,6 @@ public:
 
 	Snap();
 	Snap(int value);
-	setSnap(long stamp, int value, int* snap);
+	void setSnap(long stamp, int value, int* snap);
 };
 #endif
