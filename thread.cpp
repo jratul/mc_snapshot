@@ -5,7 +5,7 @@ void* threadFunc(void* arg) {
 	int threadId = tp->threadId;
 	Snapshot* snapshot = tp->snapshot;
 	int* updateNum = tp->updateNum;
-	int updateNum = 0;
+	//int updateNum = 0;
 	int randomValue;
 
 	while(true) {
