@@ -39,7 +39,7 @@ int main(int argc, char* argv[]) {
 		}	
 	}
 
-	usleep(3000);
+	usleep(60000);
 	finish = true;
 
 	for(int i=0;i<threadNum;i++) {
