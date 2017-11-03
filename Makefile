@@ -7,7 +7,7 @@ main.o : headers/thread.h main.cpp
 snap.cpp : headers/snap.h snap.cpp
 	g++ -c snap.cpp
 
-snapshot.cpp : headers/snapshot.h headers/snap.h snapshot.cpp
+snapshot.cpp : headers/snapshot.h snapshot.cpp
 	g++ -c snapshot.cpp
 
 thread.cpp : headers/thread.h thread.cpp
