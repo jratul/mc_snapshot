@@ -10,7 +10,7 @@ Snapshot::Snapshot(int capacity, int init) {
 }
 
 Snap* Snapshot::collect() {
-	Snap* copy = new snap[capacity];
+	Snap* copy = new Snap[capacity];
 	for(int i=0;i<capacity;i++) {
 		copy[i] = aTable[i];
 	}
@@ -31,7 +31,8 @@ int* Snapshot::scan() {
 	bool* moved = new bool[capacity];
 	oldCopy = collect();
 
-	collect: while(true) {
+	while(true) {
+		bool passFor = false;
 		newCopy = collect();
 		for(int i=0;i<capacity;i++) {
 			if(oldCopy[i].stamp != newCopy[i].stamp) {
@@ -40,9 +41,18 @@ int* Snapshot::scan() {
 				} else {
 					moved[i] = true;
 					oldCopy = newCopy;
-					continue collect;
+					passFor = true;
+					break;
 				}
 			}
+
+			if(passFor) {
+				break;
+			}
+		}
+
+		if(passFor) {
+			continue;
 		}
 
 		int* result = new int[capacity];
