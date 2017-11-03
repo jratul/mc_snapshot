@@ -3,7 +3,7 @@
 Snap::Snap(int value) {
 	this->stamp = 0;
 	this->value = value;
-	this->snap = NULL;
+	//this->snap = NULL;
 }
 
 Snap::Snap(long stamp, int value, int* snap) {
