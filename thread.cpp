@@ -8,7 +8,7 @@ void* threadFunc(void* arg) {
 	//int updateNum = 0;
 	int randomValue;
 
-	while(true) {
+	while(!finish) {
 		randomValue = rand()%100;
 		snapshot->update(randomValue, threadId);
 		updateNum[threadId]++;

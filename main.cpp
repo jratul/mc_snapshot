@@ -6,11 +6,15 @@
 #include "headers/thread.h"
 using namespace std;
 
+bool finish;
+
 int main(int argc, char* argv[]) {
 	if(argc != 2) {
 		printf("command : ./run n\n");
 		exit(1);
 	}
+
+	finish = false;
 
 	int threadNum = atoi(argv[1]);
 
@@ -36,6 +40,7 @@ int main(int argc, char* argv[]) {
 	}
 
 	usleep(3000);
+	finish = true;
 
 	for(int i=0;i<threadNum;i++) {
 		pthread_join(threads[i], NULL);

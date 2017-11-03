@@ -4,6 +4,8 @@
 #include <stdlib.h>
 #include "snapshot.h"
 
+extern bool finish;
+
 struct threadParam {
 	int threadId;
 	Snapshot* snapshot;
