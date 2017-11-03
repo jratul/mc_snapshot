@@ -1,6 +1,7 @@
 #ifndef THREAD
 #define THREAD
 #include <time.h>
+#include <stdlib.h>
 #include "snapshot.h"
 
 struct threadParam {
