@@ -10,7 +10,7 @@ Snapshot::Snapshot(int capacity, int init) {
 }
 
 Snap* Snapshot::collect() {
-	snap* copy = new snap[capacity];
+	Snap* copy = new snap[capacity];
 	for(int i=0;i<capacity;i++) {
 		copy[i] = aTable[i];
 	}
