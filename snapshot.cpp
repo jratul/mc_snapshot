@@ -21,8 +21,8 @@ Snap* Snapshot::collect() {
 void Snapshot::update(int value, int threadId) {
 	int* snapArray = scan();
 	Snap oldValue = aTable[threadId];
-	Snap newValue = new Snap(oldValue.stamp+1, value, snapArray);
-	aTable[threadId] = newValue;
+	Snap* newValue = new Snap(oldValue.stamp+1, value, snapArray);
+	aTable[threadId] = *newValue;
 }
 
 int* Snapshot::scan() {
