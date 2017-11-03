@@ -15,12 +15,12 @@ int main(int argc, char* argv[]) {
 	}
 
 	finish = false;
-
 	int threadNum = atoi(argv[1]);
 
 	srand((unsigned)time(NULL));
 
 	int* updateNum = new int[threadNum];
+	int totUpdateNum = 0;
 
 	Snapshot* snapshot = new Snapshot(threadNum, 0);
 
@@ -45,6 +45,12 @@ int main(int argc, char* argv[]) {
 	for(int i=0;i<threadNum;i++) {
 		pthread_join(threads[i], NULL);
 	}
+
+	for(int i=0;i<threadNum;i++) {
+		totUpdateNum += updateNum[i];
+	}
+
+	cout << "update : " << totUpdateNum << endl;
 
 	delete [] tp;
 	delete [] threads;
