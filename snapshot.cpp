@@ -9,7 +9,7 @@ Snapshot::Snapshot(int capacity, int init) {
 	}
 }
 
-snap* Snapshot::collect() {
+Snap* Snapshot::collect() {
 	snap* copy = new snap[capacity];
 	for(int i=0;i<capacity;i++) {
 		copy[i] = aTable[i];
@@ -20,14 +20,14 @@ snap* Snapshot::collect() {
 
 void Snapshot::update(int value, int threadId) {
 	int* snapArray = scan();
-	snap oldValue = aTable[threadId];
-	snap newValue = new snap(oldValue.stamp+1, value, snap);
+	Snap oldValue = aTable[threadId];
+	Snap newValue = new Snap(oldValue.stamp+1, value, snapArray);
 	aTable[threadId] = newValue;
 }
 
 int* Snapshot::scan() {
-	snap* oldCopy;
-	snap* newCopy;
+	Snap* oldCopy;
+	Snap* newCopy;
 	bool* moved = new bool[capacity];
 	oldCopy = collect();
 
