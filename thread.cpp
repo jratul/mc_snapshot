@@ -1,9 +1,10 @@
 #include "headers/thread.h"
 
 void* threadFunc(void* arg) {
-	int threadId = arg->threadId;
-	Snapshot* snapshot = arg->snapshot;
-	int* updateNum = arg->updateNum;
+	threadParam * tp = (threadParam*) arg;
+	int threadId = tp->threadId;
+	Snapshot* snapshot = tp->snapshot;
+	int* updateNum = tp->updateNum;
 	int updateNum = 0;
 	int randomValue;
 
