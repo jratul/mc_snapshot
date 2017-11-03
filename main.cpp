@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>
 #include <unistd.h>
@@ -17,10 +18,10 @@ int main(int argc, char* argv[]) {
 
 	int* updateNum = new int[threadNum];
 
-	Snapshot snapshot = new Snapshot(threadNum, 0);
+	Snapshot* snapshot = new Snapshot(threadNum, 0);
 
 	pthread_t * threads;
-	threads = new p_thread_t[threadNum];
+	threads = new pthread_t[threadNum];
 	threadParam* tp = new threadParam[threadNum];
 
 	for(int i=0;i<threadNum;i++) {

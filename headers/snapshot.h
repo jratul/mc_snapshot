@@ -8,7 +8,7 @@ class Snapshot {
 	int capacity;
 
 	Snapshot(int capacity, int init);
-	snap* collect();
+	Snap* collect();
 	void update(int value, int threadId);
 	int* scan();
 };

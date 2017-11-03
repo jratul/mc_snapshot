@@ -2,6 +2,7 @@
 #define SNAP
 
 class Snap {
+public:
 	long stamp;
 	int value;
 	int* snap;
