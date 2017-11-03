@@ -7,6 +7,7 @@ public:
 	int value;
 	int* snap;
 
+	Snap();
 	Snap(int value);
 	Snap(long stamp, int value, int* snap);
 };
