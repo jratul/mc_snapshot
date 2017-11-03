@@ -1,4 +1,5 @@
 #include "headers/snapshot.h"
+#include <cstddef>
 
 Snapshot::Snapshot(int capacity, int init) {
 	aTable = new Snap[capacity];
