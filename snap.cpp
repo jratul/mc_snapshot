@@ -9,7 +9,7 @@ Snap::Snap(int value) {
 	//this->snap = NULL;
 }
 
-Snap::Snap(long stamp, int value, int* snap) {
+Snap::setSnap(long stamp, int value, int* snap) {
 	this->stamp = stamp;
 	this->value = value;
 	this->snap = snap;

@@ -4,7 +4,7 @@ Snapshot::Snapshot(int capacity, int init) {
 	aTable = new Snap[capacity];
 	this->capacity = capacity;
 	for(int i=0;i<capacity; i++) {
-		aTable[i] = new Snap(init);
+		aTable[i].setSnap(0, init, NULL);
 	}
 }
 
