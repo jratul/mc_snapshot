@@ -29,7 +29,7 @@ int main(int argc, char* argv[]) {
 		tp[i].snapshot = snapshot;
 		tp[i].updateNum = updateNum;
 
-		if(pthread_create(&threads[i], 0, threadFunction, (void*) &tp[i]) < 0) {
+		if(pthread_create(&threads[i], 0, threadFunc, (void*) &tp[i]) < 0) {
 			printf("pthread_create error!\n");
 			return 0;
 		}	

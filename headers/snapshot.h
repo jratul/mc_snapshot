@@ -4,6 +4,7 @@
 #include "snap.h"
 
 class Snapshot {
+public:
 	Snap* aTable;
 	int capacity;
 
